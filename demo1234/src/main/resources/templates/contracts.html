@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Contracts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<h1>Contracts</h1>
+<a th:href="@{/}">Back to Menu</a>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Contract Number</th>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Client ID</th>
+        <th>Supplier ID</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="contract : ${contracts}">
+        <td th:text="${contract.id}"></td>
+        <td th:text="${contract.contractNumber}"></td>
+        <td th:text="${contract.date}"></td>
+        <td th:text="${contract.amount}"></td>
+        <td th:text="${contract.clientId}"></td>
+        <td th:text="${contract.supplierId}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

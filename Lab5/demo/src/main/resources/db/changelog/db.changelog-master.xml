@@ -5,7 +5,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
 
-    <changeSet id="1" author="pxlxta">
+    <changeSet id="1" author="zxc">
         <!-- Создание таблицы categories -->
         <createTable tableName="categories">
             <column name="id" type="BIGINT" autoIncrement="true">
